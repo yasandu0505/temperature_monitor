@@ -18,8 +18,10 @@ class TemperatureSensor(Node):
         self.timer = self.create_timer(1.0, self.send_temperature)
     
     def send_temperature(self):
-        temperature = random.uniform(0.0, 50.0)
+        temperature = Float32()
+        temperature.data = round(random.uniform(0.0, 50.0),1)
         self.temperature_publisher.publish(temperature)
+        self.get_logger().info(f"Temperature status {temperature.data}°C")
 
 
 def main(args=None):
