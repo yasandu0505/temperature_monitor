@@ -36,7 +36,7 @@ class TemperatureMonitor(Node):
         if self.sensor_val_1 is None or self.sensor_val_2 is None:
             return
         
-        avg = (self.sensor_val_1 + self.sensor_val_2) / 2.0
+        avg = round((self.sensor_val_1 + self.sensor_val_2) / 2.0,1)
 
         if avg >= 40.0:
             self.get_logger().warning(f"Average temperature: {avg}°C | CRITICAL")
