@@ -26,7 +26,8 @@ setup(
     entry_points={
         'console_scripts': [
             "temperature_sensor = temperature_monitor.temperature_sensor:main",
-            "temperature_monitor = temperature_monitor.temperature_monitor:main"
+            "temperature_monitor = temperature_monitor.temperature_monitor:main",
+            "temperature_sensor_2 = temperature_monitor.temperature_sensor2:main"
         ],
     },
 )
